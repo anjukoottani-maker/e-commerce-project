@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#222;
+    color:white;
+    padding:15px 30px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:white;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.search-box input{
+    padding:10px;
+    width:300px;
+}
+
+.search-box button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+.section-title{
+    text-align:center;
+    margin:40px 0 20px;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+}
+
+.card-content{
+    padding:15px;
+    text-align:center;
+}
+
+.card button{
+    background:#222;
+    color:white;
+    border:none;
+    padding:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.category{
+    background:white;
+    width:200px;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.about, .contact{
+    background:white;
+    margin:30px;
+    padding:30px;
+    border-radius:10px;
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact input,
+.contact textarea{
+    margin:10px 0;
+    padding:10px;
+}
+
+.contact button{
+    padding:10px;
+    background:#222;
+    color:white;
+    border:none;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">E-Commerce Store</div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+             <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="orders.html">Orders</a></li>
+             <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to E-Commerce Store</h1>
+    <p>Shop the latest products at the best prices.</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search Products">
+        <button onclick="searchProduct()">Search</button>
+    </div>
+</section>
+
+<h2 class="section-title">Featured Products</h2>
+
+<section class="products">
+
+    <div class="card">
+        <img src="https://cdn.mos.cms.futurecdn.net/Q8hjHr8JG7Yu36wce5jTT5.jpg" alt="Phone" width="500" height="600">
+        <div class="card-content">
+            <h3>Smart Phone</h3>
+            <p>₹15,000</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBfZftjTC4GCndBk156zjlYIgIEko93fIPwYbp0cQQBQ&s" alt="Laptop" width="500" height="600">
+        <div class="card-content">
+            <h3>Laptop</h3>
+            <p>₹45,000</p>
+            <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdbtEpKQsqniMTFbMSDHrAM2mT0-E0ijhzCZjMsd5etQ&s" alt="Headphone" width="500" height="600">
+        <div class="card-content">
+            <h3>Headphones</h3>
+            <p>₹2,000</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+</section>
+
+<h2 class="section-title">Categories</h2>
+
+<section class="categories">
+
+    <div class="category">
+        <h3>Electronics</h3>
+    </div>
+
+    <div class="category">
+        <h3>Fashion</h3>
+    </div>
+
+    <div class="category">
+        <h3>Books</h3>
+    </div>
+
+    <div class="category">
+        <h3>Home Appliances</h3>
+    </div>
+
+</section>
+
+<section class="about">
+    <h2>About Us</h2>
+    <br>
+    <p>
+        Welcome to our E-Commerce Store. We provide quality products
+        at affordable prices. Our mission is to offer a simple and
+        secure online shopping experience.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us:9876451426</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 E-Commerce Store. All Rights Reserved.</p>
+</footer>
+
+<script>
+function searchProduct(){
+    let product = document.getElementById("searchInput").value;
+
+    if(product === ""){
+        alert("Please enter a product name");
+    } else {
+        alert("Searching for: " + product);
+    }
+}
+</script>
+
+</body>
+</html>
