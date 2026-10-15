@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>E-Commerce Products</title>
+
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#222;
+    color:white;
+    padding:15px 30px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    text-align:center;
+    background:white;
+    padding:50px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#555;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.search-section input{
+    width:300px;
+    max-width:90%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+.search-section button{
+    padding:12px 20px;
+    margin-left:5px;
+    background:#222;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.search-section button:hover{
+    background:#444;
+}
+
+
+/* =========================
+   CART BUTTON
+========================= */
+
+.cart-section{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.cart-button{
+    display:inline-block;
+    background:#222;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.cart-button:hover{
+    background:#444;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    padding:20px 30px 50px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card{
+
+    background:white;
+
+    width:260px;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.product-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.product-icon{
+
+    font-size:70px;
+
+    margin-bottom:15px;
+}
+
+
+.product-card h3{
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+
+.product-price{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+
+.product-description{
+
+    color:#666;
+
+    font-size:14px;
+
+    min-height:40px;
+
+    margin-bottom:15px;
+}
+
+
+.product-card button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#222;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:15px;
+}
+
+
+.product-card button:hover{
+
+    background:#444;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#message{
+
+    text-align:center;
+
+    font-size:18px;
+
+    padding:30px;
+
+    color:#555;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:30px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    nav ul{
+
+        justify-content:center;
+    }
+
+    nav ul li{
+
+        margin:5px 10px;
+    }
+
+    .search-section input{
+
+        width:250px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            E-Commerce Store
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="home.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="register.html">
+                    Register
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html">
+                    Login
+                </a>
+            </li>
+             <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    Cart
+                </a>
+            </li>
+            <li>
+                <a href="orders.html">
+                    Orders
+                </a>
+            </li>
+             <li>
+                <a href="checkout.html">
+                    Checkout
+                </a>
+            </li>
+
+            <li>
+                <a href="home.html#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <h1>
+        E-Commerce Products
+    </h1>
+
+    <p>
+        Explore our latest products at affordable prices.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     SEARCH
+========================= -->
+
+<section class="search-section">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Products"
+    >
+
+    <button onclick="searchProducts()">
+        Search
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<div class="cart-section">
+
+    <a
+        href="cart.html"
+        class="cart-button"
+    >
+        🛒 Cart Items:
+        <span id="cartCount">0</span>
+    </a>
+
+</div>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section
+    class="products-container"
+    id="productsContainer"
+>
+
+    <div id="message">
+        Loading products...
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 E-Commerce Store. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+let allProducts = [];
+
+
+
+/* =========================
+   LOAD PRODUCTS
+========================= */
+
+function loadProducts(){
+
+    fetch("/api/products")
+
+    .then(response => {
+
+        if(!response.ok){
+
+            throw new Error(
+                "Failed to load products"
+            );
+
+        }
+
+        return response.json();
+
+    })
+
+    .then(products => {
+
+        console.log(
+            "Products:",
+            products
+        );
+
+        allProducts = products;
+
+        displayProducts(products);
+
+    })
+
+    .catch(error => {
+
+        console.error(error);
+
+        document.getElementById(
+            "productsContainer"
+        ).innerHTML =
+
+            "<div id='message'>" +
+            "Failed to load products" +
+            "</div>";
+
+    });
+
+}
+
+
+
+/* =========================
+   DISPLAY PRODUCTS
+========================= */
+
+function displayProducts(products){
+
+    const container =
+        document.getElementById(
+            "productsContainer"
+        );
+
+
+    container.innerHTML = "";
+
+
+    if(products.length === 0){
+
+        container.innerHTML =
+
+            "<div id='message'>" +
+            "No products found" +
+            "</div>";
+
+        return;
+    }
+
+
+    products.forEach(product => {
+
+
+        let icon = "🛍️";
+
+
+        if(
+            product.product_name
+            .toLowerCase()
+            .includes("phone")
+        ){
+
+            icon = "📱";
+
+        }
+
+        else if(
+            product.product_name
+            .toLowerCase()
+            .includes("laptop")
+        ){
+
+            icon = "💻";
+
+        }
+
+        else if(
+            product.product_name
+            .toLowerCase()
+            .includes("headphone")
+        ){
+
+            icon = "🎧";
+
+        }
+
+        else if(
+            product.product_name
+            .toLowerCase()
+            .includes("watch")
+        ){
+
+            icon = "⌚";
+
+        }
+
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "product-card";
+
+
+        card.innerHTML = `
+
+            <div class="product-icon">
+                ${icon}
+            </div>
+
+            <h3>
+                ${product.product_name}
+            </h3>
+
+            <div class="product-price">
+                ₹${Number(product.price).toFixed(2)}
+            </div>
+
+            <div class="product-description">
+                ${product.description || ""}
+            </div>
+
+            <button
+                onclick='addToCart(${JSON.stringify(product)})'
+            >
+                Add to Cart
+            </button>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+
+/* =========================
+   SEARCH PRODUCTS
+========================= */
+
+function searchProducts(){
+
+    const keyword =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    if(keyword === ""){
+
+        displayProducts(allProducts);
+
+        return;
+    }
+
+
+    const filteredProducts =
+        allProducts.filter(product =>
+
+            product.product_name
+            .toLowerCase()
+            .includes(keyword)
+
+        );
+
+
+    displayProducts(filteredProducts);
+
+}
+
+
+
+/* =========================
+   SEARCH USING ENTER KEY
+========================= */
+
+document
+.getElementById("searchInput")
+.addEventListener(
+    "keypress",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            searchProducts();
+
+        }
+
+    }
+);
+
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addToCart(product){
+
+    let cart =
+        JSON.parse(
+            localStorage.getItem("cart")
+        ) || [];
+
+
+    cart.push(product);
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    updateCartCount();
+
+
+    alert(
+        product.product_name +
+        " added to cart!"
+    );
+
+}
+
+
+
+/* =========================
+   UPDATE CART COUNT
+========================= */
+
+function updateCartCount(){
+
+    let cart =
+        JSON.parse(
+            localStorage.getItem("cart")
+        ) || [];
+
+
+    document.getElementById(
+        "cartCount"
+    ).innerText = cart.length;
+
+}
+
+
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+loadProducts();
+
+updateCartCount();
+
+
+</script>
+
+
+</body>
+
+</html>
