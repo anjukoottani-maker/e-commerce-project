@@ -3,7 +3,7 @@ const mysql = require("mysql2");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // ==========================================
@@ -21,10 +21,11 @@ app.use(express.static(__dirname));
 // ==========================================
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "ecommerce"
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: Number(process.env.DB_PORT || 3306)
 });
 
 
@@ -411,13 +412,6 @@ app.get("/api/orders", (req, res) => {
 // START SERVER
 // ==========================================
 
-app.listen(
-    PORT,
-    () => {
-
-        console.log(
-            "Server running on http://localhost:3000"
-        );
-
-    }
-);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
